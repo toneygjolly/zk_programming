@@ -1,0 +1,5 @@
+<window title="welcome"
+ border="normal">
+<label value="This is new page">
+</label>
+</window>
