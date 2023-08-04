@@ -1,5 +1,5 @@
 <window title="fill the form" border="normal" width="400px">
-<grid>
+<grid hflex="1">
 <auxhead>
 <auxheader colspan="2" label="Registration form" style="font-style:16px"/>
 </auxhead>
@@ -7,28 +7,27 @@
 </columns>
 <rows>
 <row>
-User name <textbox id="username"/>
+User name <textbox id="username" hflex="1"/>
 </row>
 <row>
-Gender <radiogroup id="radio">
+Gender <radiogroup id="radio" hflex="1">
 <radio label="male" value="male"/>
 <radio label="female"/>
 </radiogroup>
 </row>
 <row>
-Date-of-Brith<datebox id="date"/>
+Date-of-Brith<datebox id="date" hflex="1"/>
 </row>
-<row spans="2" align="center">
+<row spans="2" align="center" >
 <hlayout>
 <checkbox/>Accept the all condition
 </hlayout>
 </row>
 <row spans="2" align="right">
-<button label="sumbit"></button>
+<button id="submit" label="sumbit"></button>
+<button id="reset" label="reset"></button>
 </row>
-<row spans="2" align="left">
-<button label="sumbit"></button>
-</row>
+
 </rows>
 
 </grid>
