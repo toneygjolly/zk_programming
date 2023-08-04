@@ -1,0 +1,35 @@
+<window title="fill the form" border="normal" width="400px">
+<grid>
+<auxhead>
+<auxheader colspan="2" label="Registration form" style="font-style:16px"/>
+</auxhead>
+<columns visible="true">
+</columns>
+<rows>
+<row>
+User name <textbox id="username"/>
+</row>
+<row>
+Gender <radiogroup id="radio">
+<radio label="male" value="male"/>
+<radio label="female"/>
+</radiogroup>
+</row>
+<row>
+Date-of-Brith<datebox id="date"/>
+</row>
+<row spans="2" align="center">
+<hlayout>
+<checkbox/>Accept the all condition
+</hlayout>
+</row>
+<row spans="2" align="right">
+<button label="sumbit"></button>
+</row>
+<row spans="2" align="left">
+<button label="sumbit"></button>
+</row>
+</rows>
+
+</grid>
+</window>
