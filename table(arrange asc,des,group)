@@ -1,0 +1,47 @@
+<window title="hello" border="normal">
+<grid>
+<columns menupopup="auto">
+<column label="Author" sort="auto"></column>
+<column label="Title" sort="auto"></column>
+<column label="publisher" sort="auto"></column>
+<column label="pages" sort="auto"></column>
+<column label="Comment" id="input"></column>
+</columns>
+
+<rows>
+
+<row>
+<label value="Mycomputer"></label>
+<label value="The king"></label>
+<label value="computer"></label>
+<label value="99"></label>
+<textbox></textbox>
+</row>
+
+<row>
+<label value="computer"></label>
+<label value="The hidden story"></label>
+<label value="james"></label>
+<label value="100"></label>
+<textbox></textbox>
+</row>
+
+<row>
+<label value="Ram"></label>
+<label value="wings"></label>
+<label value="ram"></label>
+<label value="149"></label>
+<textbox></textbox>
+</row>
+
+<row>
+<label value="computer"></label>
+<label value="sea"></label>
+<label value="john"></label>
+<label value="123"></label>
+<textbox></textbox>
+</row>
+
+</rows>
+</grid>
+</window>
