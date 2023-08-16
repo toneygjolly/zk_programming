@@ -1,0 +1,76 @@
+
+<vbox>
+<grid width="400px">
+<columns>
+<column label="Category" width="150px"/>
+<column label="value"/>
+</columns>
+
+<rows>
+
+<row>
+<label id="c0" value="C/C++"/>
+<doublebox id="v0" value="20"
+constraint="no empty" onChange="update(0)"/>
+</row>
+
+<row>
+<label id="c1" value="Java"/>
+<doublebox id="v1" value="25"
+constraint="no empty"
+onChange="update(1)"/>
+</row>
+
+<row>
+<label id="c2" value="PYTHON"/>
+<doublebox id="v2" value="25"
+constraint="no empty" onChange="update(2)"/>
+</row>
+
+<row>
+<label id="c3" value="PHP"/>
+<doublebox id="v3" value="30"
+constraint="no empty" onChange="update(3)"/>
+</row>
+
+</rows>
+
+</grid>
+
+<checkbox label="3D Chart"
+checked="true"
+onCheck="mychart.setThreeD(Self.isChecked())"/>
+<chart id="mychart" title="Piechart" width="500" height="250" type="pie" threeD="true" fgAlpha="128">
+
+<attribute name="onClick">
+Area area=event.getAreaComponent();
+if(area!=null) {
+alert(""+area.getAttribute("entity")+":"+area.getTooltiptext());
+}
+</attribute>
+
+<zscript>
+void update(int rowIndex)
+{
+Label lb =(Label)
+
+self.getFellow("c"+rowIndex);
+Doublebox db=(Doublebox)
+self.getFellow("v"+rowIndex);
+model.setValue(lb.value,new
+Double(db.getValue().doubleValue()));
+}
+PieModel model=new
+SimplePieModel();
+for(int j=0;j&lt;4;++j){
+update(j);
+}
+mychart.setModel(model);
+</zscript>
+
+</chart>
+<toolbarbutton label="See More chart.."
+href="/data/morechart.zul"
+target="zksandbox"/>
+
+</vbox>
